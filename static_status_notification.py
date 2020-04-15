@@ -28,7 +28,7 @@ def send_email(data):
     server.sendmail(email, send_to_email, text)
     server.quit()
 
-# Import json data
+# Import json data. If file resides in different location, enter full path for status.json
 with open('status.json', 'r') as status:
     data = json.load(status)
 

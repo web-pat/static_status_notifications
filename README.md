@@ -6,9 +6,7 @@ Download script and put it into the same directory as your *static_status* webpa
 
 `git clone https://github.com/web-pat/static_status_notifications.git`
 
-In order to check for outages the script parses *status.json* which is provided and updated by *static_status* next to the html. If you run this script from a directory separate from *static_status*, make sure the json-file is present or create a symlink to it:
-
-`ln -s /path/to/static_status/status.json status.json`
+In order to check for outages the script parses *status.json* which is provided and updated by *static_status* next to the html. Make sure the json-file is present at the location you entered in the script.
 
 ## Create Cronjob
 In order to check for outages periodically, create a Cronjob
@@ -22,5 +20,7 @@ and add the following line:
 to run it once every hour or every 30 minutes:
 
 `*/30 * * * * /usr/bin/python /path/to/static_status_notification.py`
+
+It is, of course, sensible to time your cronjob so that it triggers after *static_status* updated.
 
 
