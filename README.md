@@ -6,7 +6,7 @@ Download script and put it into the same directory as your *static_status* webpa
 
 `git clone https://github.com/web-pat/static_status_notifications.git`
 
-Edit the script and enter your own E-mail credentials, from-adress, to-adress, smtp server (line 24).
+Edit the script and enter your own E-mail credentials, from-address, to-address, smtp server (line 24).
 
 In order to check for outages the script parses *status.json* which is provided and updated by *static_status* next to the html. Make sure the json-file is present at the location you entered in the script.  
 If you are running the script from a directory different from your status.json, it's necessary to enter the full path to the file as a parameter in line 32.
