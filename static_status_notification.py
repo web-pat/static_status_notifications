@@ -21,7 +21,7 @@ def send_email(data):
     #Attach the message to the MIMEMultipart object
     msg.attach(MIMEText(message, 'plain'))
 
-    server = smtplib.SMTP('your.smtp.server', 587) #Insert your own smtp-server
+    server = smtplib.SMTP('your.smtp.server', 587) #Insert your own smtp-server credentials
     server.starttls()
     server.login(email, password)
     text = msg.as_string() #Convert the MIMEMultipart object to a string to send
